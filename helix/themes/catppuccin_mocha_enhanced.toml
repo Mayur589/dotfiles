@@ -1,0 +1,55 @@
+# Custom Catppuccin Mocha with Enhanced Status Bar
+# Inherits from catppuccin_mocha with beautiful status bar colors
+
+inherits = "catppuccin_mocha"
+
+# Enhanced Status Bar Styling
+"ui.statusline" = { fg = "text", bg = "surface0" }
+"ui.statusline.inactive" = { fg = "subtext0", bg = "mantle" }
+
+# Mode-specific colors (left side)
+"ui.statusline.normal" = { fg = "base", bg = "blue", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "base", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "base", bg = "mauve", modifiers = ["bold"] }
+
+# Separator styling
+"ui.statusline.separator" = { fg = "mauve", bg = "surface0" }
+
+# Git/Version control (center)
+"ui.bufferline" = { fg = "subtext1", bg = "mantle" }
+"ui.bufferline.active" = { fg = "mauve", bg = "surface0", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "mantle" }
+
+# Right side elements
+"info" = { fg = "sky" }
+"hint" = { fg = "teal" }
+"warning" = { fg = "peach", modifiers = ["bold"] }
+"error" = { fg = "red", modifiers = ["bold"] }
+
+# Diagnostics colors in status bar
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "peach", style = "curl" } }
+"diagnostic.info" = { underline = { color = "sky", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "teal", style = "curl" } }
+
+# Position and file info colors
+"ui.text" = { fg = "text" }
+"ui.text.focus" = { fg = "sapphire", modifiers = ["bold"] }
+
+# Enhanced cursor line for better visibility
+"ui.cursorline.primary" = { bg = "surface0" }
+"ui.cursorline.secondary" = { bg = "mantle" }
+
+# Line numbers
+"ui.linenr" = { fg = "overlay0" }
+"ui.linenr.selected" = { fg = "lavender", modifiers = ["bold"] }
+
+# Selection colors
+"ui.selection" = { bg = "surface2" }
+"ui.selection.primary" = { bg = "surface1" }
+
+# Popup and menu
+"ui.menu" = { fg = "text", bg = "surface0" }
+"ui.menu.selected" = { fg = "mantle", bg = "mauve", modifiers = ["bold"] }
+"ui.popup" = { fg = "text", bg = "surface0" }
+"ui.help" = { fg = "text", bg = "surface0" }

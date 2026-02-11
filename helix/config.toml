@@ -1,0 +1,99 @@
+theme = "catppuccin_mocha_enhanced"
+
+[editor]
+line-number = "relative"
+mouse = false
+continue-comments = false
+bufferline = "multiple"
+true-color = true
+end-of-line-diagnostics = "hint"
+color-modes = true
+
+[editor.statusline]
+# left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+# center = ["version-control"]
+# right = ["diagnostics", "selections", "register", "position", "file-encoding"]
+left = ["mode", "spinner", "diagnostics", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = ["version-control"]
+right = ["selections", "register", "position", "file-encoding", "file-line-ending", "file-type"] 
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[editor.auto-save]
+# after-delay.enable = true
+
+[editor.whitespace]
+render = "none"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25 
+max-indent-retain = 0
+wrap-indicator = ""  
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+#keymaps
+[keys.normal]
+C-o = ":open ~/.config/helix/config.toml"
+C-l = ":open ~/.config/helix/languages.toml"
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file',
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
+
+#window management
+tab = ":buffer-next"
+S-tab = ":buffer-previous"
+C-w = ":buffer-close"
+C-s = ":config-reload"
+
+[keys.normal.space]
+s = ":w"
+
+[keys.insert]
+"C-x" = "normal_mode"
+
