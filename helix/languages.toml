@@ -87,3 +87,10 @@ formatter = { command = "clang-format" }
 name = "cpp"
 auto-format = true
 formatter = { command = "clang-format" }
+
+[[language]]
+name = "ini"
+scope = "source.ini"
+injection-regex = "ini"
+file-types = ["conf", "ini", "cfg"]
+roots = []
