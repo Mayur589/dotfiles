@@ -92,7 +92,7 @@ C-w = ":buffer-close"
 C-s = ":config-reload"
 
 [keys.normal.space]
-s = ":w"
+space = ":w"
 
 [keys.insert]
 "C-x" = "normal_mode"
